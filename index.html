@@ -78,7 +78,7 @@ h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,6.6vw,84px);lin
 /* sections */
 section.block{border-top:1px solid var(--ink);padding-block:clamp(48px,7vw,96px)}
 .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;margin-bottom:clamp(28px,4vw,48px)}
-.sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
+.sec-head h2,.contact h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
 @media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:12px}}
 
 /* who rows */
@@ -147,7 +147,10 @@ section.block{border-top:1px solid var(--ink);padding-block:clamp(48px,7vw,96px)
 @media (max-width:860px){.contact{grid-template-columns:1fr}}
 .direct{display:grid;gap:18px;margin-top:28px}
 .direct>div{border-top:1px solid var(--ink);padding-top:10px}
-.direct .v{font-size:18px;user-select:all}
+.direct .v{font-size:18px}
+.direct a.v{display:inline-block;padding-block:4px;text-underline-offset:4px;text-decoration-thickness:1px}
+.direct a.v:hover{color:var(--signal)}
+.contact h2{margin-top:12px}
 form{display:grid;gap:18px}
 .fld{display:grid;gap:6px}
 .fld label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
@@ -229,7 +232,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
               <p>Made from photos of your line, without stopping it. Your plant expert signs off every technical step before delivery.</p>
               <ul><li>Machine and process SOPs</li><li>Safety and onboarding films</li><li>Multi-language versions with captions</li></ul>
               <div class="price"><span class="cap mute">Training Kit</span><strong>Quoted per finished minute</strong></div>
-              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20training%20or%20SOP%20videos%20for%20our%20plant." target="_blank" rel="noopener">Send a photo of your line →</a><a class="pill" href="#contact" data-pick="Manufacturer">Use the form</a></div>
+              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20here%27s%20a%20photo%20of%20our%20line%20for%20a%20free%20training%20clip." target="_blank" rel="noopener">Send a photo of your line →</a><a class="pill" href="#contact" data-pick="Manufacturer">Use the form</a></div>
             </div>
             <div class="film"><video muted loop playsinline preload="none" data-src="videos/manufacturer.mp4"></video>
               <div class="ph"><div class="r"><span>Film 02</span><span>Machine SOP</span></div>
@@ -249,7 +252,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
               <p>Works from a photo, a render or a sketch, so you can launch before stock even lands.</p>
               <ul><li>Hero product film</li><li>10 ad variants for Meta and YouTube</li><li>Vertical, square and wide cuts</li></ul>
               <div class="price"><span class="cap mute">Product Kit from</span><strong>₹1 L</strong></div>
-              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20a%20product%20film." target="_blank" rel="noopener">Send your product shot →</a><a class="pill" href="#contact" data-pick="Brand or other">Use the form</a></div>
+              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20here%27s%20my%20product%20shot%20for%20a%20free%20clip." target="_blank" rel="noopener">Send your product shot →</a><a class="pill" href="#contact" data-pick="Brand or other">Use the form</a></div>
             </div>
             <div class="film"><video muted loop playsinline preload="none" data-src="videos/brand.mp4"></video>
               <div class="ph"><div class="r"><span>Film 03</span><span>Product hero</span></div>
@@ -302,10 +305,10 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
     <div class="wrap contact">
       <div>
         <span class="cap mute">Contact</span>
-        <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,48px);line-height:1.08;margin:12px 0 0;text-wrap:balance">Send one plan, photo or product shot. Get a free 15-second clip.</h2>
+        <h2>Send one plan, photo or product shot. Get a free 15-second clip.</h2>
         <div class="direct">
-          <div><div class="cap mute">WhatsApp</div><div class="v">+91 98344 37383</div></div>
-          <div><div class="cap mute">Email</div><div class="v">harkalpranav49@gmail.com</div></div>
+          <div><div class="cap mute">WhatsApp</div><a class="v" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20a%20free%2015-second%20clip." target="_blank" rel="noopener">+91 98344 37383</a></div>
+          <div><div class="cap mute">Email</div><a class="v" href="mailto:harkalpranav49@gmail.com">harkalpranav49@gmail.com</a></div>
           <div><div class="cap mute">Studio</div><div class="v">Pune · Dubai</div></div>
         </div>
       </div>
@@ -371,8 +374,8 @@ document.getElementById('replay').addEventListener('click',e=>{e.stopPropagation
 /* who rows: one open at a time; opening a row also rewrites the hero button */
 const hero=document.getElementById('heroCta');
 const heroText={dev:['Send your floor plan →','Hi%20Mantle%2C%20here%27s%20my%20floor%20plan%20for%20a%20free%20clip.'],
-  mfg:['Send a photo of your line →','Hi%20Mantle%2C%20I%27d%20like%20training%20or%20SOP%20videos%20for%20our%20plant.'],
-  brand:['Send your product shot →','Hi%20Mantle%2C%20I%27d%20like%20a%20product%20film.']};
+  mfg:['Send a photo of your line →','Hi%20Mantle%2C%20here%27s%20a%20photo%20of%20our%20line%20for%20a%20free%20training%20clip.'],
+  brand:['Send your product shot →','Hi%20Mantle%2C%20here%27s%20my%20product%20shot%20for%20a%20free%20clip.']};
 const rows=[...document.querySelectorAll('.row')];
 function loadFilm(row){row.querySelectorAll('video[data-src]').forEach(v=>{if(v.src)return;v.src=v.dataset.src;
   v.addEventListener('loadeddata',()=>{v.parentElement.querySelector('.ph').hidden=true;v.play().catch(()=>{});},{once:true});
