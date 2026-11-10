@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mantle | AI films for what you can't film yet</title>
+<meta name="description" content="Mantle makes AI films for unbuilt real estate projects, factory training and SOPs, and unlaunched products. Pune and Dubai.">
+<meta property="og:title" content="Mantle | We film what you can't film yet">
+<meta property="og:description" content="AI films for unbuilt projects, unseen processes and unlaunched products. Send one floor plan, get a free 15-second clip.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#E8ECEF">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23262933'/%3E%3Cpath d='M8 24V9l8 8 8-8v15' fill='none' stroke='%23E8ECEF' stroke-width='2.4' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://api.fontshare.com">
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=clash-display@500,600&f[]=zodiak@300,400&f[]=satoshi@400,500,700&display=swap">
+<script>document.documentElement.classList.add('js')</script>
+<style>
+/* Layout: a technical sheet. Wordmark bar, serif thesis, wireframe figure, then numbered rows (who you are, how it works, kits), founder note, contact. Single committed light look. */
+:root{
+  --bg:#FFFFFF; --steel:#E8ECEF; --ink:#262933; --mute:#6A707C; --hair:#D5DADF; --signal:#2F6FDE;
+  --mark:'Clash Display', 'Arial Black', sans-serif;
+  --serif:'Zodiak', Georgia, serif;
+  --sans:'Satoshi', 'Helvetica Neue', Arial, sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img,video{max-width:100%;display:block}
+.wrap{max-width:1180px;margin:0 auto;padding-left:max(20px, env(safe-area-inset-left, 0px));padding-right:max(20px, env(safe-area-inset-right, 0px))}
+.cap{font-family:var(--sans);font-weight:500;font-size:12px;letter-spacing:.09em;text-transform:uppercase}
+.mute{color:var(--mute)}
+:focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+/* loader */
+.loader{display:none}
+.js .loader{display:flex;position:fixed;inset:0;z-index:50;background:var(--steel);align-items:flex-end;padding:0 0 max(28px,env(safe-area-inset-bottom,0px)) max(28px,env(safe-area-inset-left,0px));transition:opacity .45s ease, visibility .45s}
+.loader .tick{display:flex;align-items:center;gap:10px;font-size:12px}
+.loader .tick::before{content:"";width:18px;height:22px;border-left:1px solid var(--ink);background:linear-gradient(var(--ink),var(--ink)) left 50%/100% 1px no-repeat}
+.loaded .loader{opacity:0;visibility:hidden}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--hair)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:21;background:var(--bg)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.wordmark{font-family:var(--mark);font-weight:600;font-size:clamp(22px,2.8vw,28px);letter-spacing:.04em;text-decoration:none}
+nav{display:flex;align-items:center;gap:28px}
+nav a.cap{text-decoration:none;color:var(--mute)}
+nav a.cap:hover{color:var(--ink)}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--ink);border-radius:999px;padding:7px 14px;font-size:12px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;background:transparent;color:var(--ink);cursor:pointer;font-family:var(--sans)}
+.pill.solid{background:var(--ink);color:var(--bg)}
+.pill.solid:hover{background:var(--signal);border-color:var(--signal)}
+@media (max-width:760px){nav .cap{display:none}}
+
+/* hero */
+.hero{padding-block:clamp(36px,6vw,72px) 24px}
+.tags{display:flex;align-items:center;flex-wrap:wrap;gap:0;margin-bottom:28px}
+.tags span{border:1px solid var(--ink);border-radius:999px;padding:5px 12px;font-size:11px;font-weight:500;letter-spacing:.07em;text-transform:uppercase}
+.tags i{display:block;width:clamp(16px,4vw,40px);height:1px;background:var(--ink)}
+h1{font-family:var(--serif);font-weight:300;font-size:clamp(36px,6.6vw,84px);line-height:1.02;letter-spacing:-.02em;margin:0;max-width:16ch;text-wrap:balance}
+.hero p.sub{font-size:clamp(16px,1.6vw,19px);color:var(--mute);max-width:52ch;margin:22px 0 0}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.figure{position:relative;margin:clamp(12px,3vw,28px) 0 0;height:clamp(340px,60vw,580px);display:flex;align-items:flex-end;justify-content:space-between;gap:12px}
+.figure figcaption{position:relative;z-index:1;max-width:30ch;font-size:12px;color:var(--mute);line-height:1.5;background:var(--bg)}
+.figure .replay{position:relative;z-index:1;flex:none}
+@media (max-width:600px){#fit{top:42%}}
+#fit{position:absolute;left:50%;top:48%;width:0;height:0;perspective:2200px}
+#plan{position:absolute;left:-200px;top:-150px;width:400px;height:300px;transform-style:preserve-3d;
+  transform:translateY(calc(var(--r,1)*24px)) rotateX(calc(var(--r,1)*56deg)) rotateZ(calc(var(--r,1)*-38deg + var(--drift,0deg)))}
+.room{position:absolute;border:1px dashed var(--hair)}
+.room b{position:absolute;left:7px;bottom:5px;font-family:var(--sans);font-size:10px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+.f{position:absolute;background:var(--bg);border:1px solid var(--ink);backface-visibility:visible}
+.fh{transform-origin:50% 100%;transform:rotateX(-90deg) scaleY(var(--s))}
+.fv{transform-origin:100% 50%;transform:rotateY(90deg) scaleX(var(--s))}
+.top{position:absolute;background:var(--bg);border:1px solid var(--ink);transform:translateZ(calc(var(--h)*var(--t,1)*1px))}
+
+/* sections */
+section.block{border-top:1px solid var(--ink);padding-block:clamp(48px,7vw,96px)}
+.sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;margin-bottom:clamp(28px,4vw,48px)}
+.sec-head h2{font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,48px);line-height:1.08;letter-spacing:-.015em;margin:0;text-wrap:balance}
+@media (max-width:760px){.sec-head{grid-template-columns:1fr;gap:12px}}
+
+/* who rows */
+.rows{border-top:1px solid var(--hair)}
+.row{border-bottom:1px solid var(--hair)}
+.row>button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:56px minmax(0,1.3fr) minmax(0,1fr) minmax(0,1.2fr) 70px;align-items:center;gap:16px;padding:22px 0;cursor:pointer}
+.row>button:focus-visible{outline:2px solid var(--signal);outline-offset:2px}
+.row .no{font-size:13px;color:var(--mute)}
+.row .name{font-family:var(--serif);font-weight:400;font-size:clamp(22px,2.6vw,30px);line-height:1.1}
+.row .more{justify-self:end;border:1px solid var(--ink);border-radius:999px;padding:4px 10px;font-size:11px;font-weight:500;letter-spacing:.07em}
+.row[data-open] .more{background:var(--ink);color:var(--bg)}
+.row>button:hover .name{color:var(--signal)}
+@media (max-width:760px){.row>button{grid-template-columns:36px minmax(0,1fr) 64px;row-gap:4px}.row .c3,.row .c4{display:none}}
+.panel{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(20px,4vw,48px);padding:4px 0 36px 72px}
+.row:not([data-open]) .panel{display:none}
+@media (max-width:760px){.panel{grid-template-columns:1fr;padding-left:0}}
+.prob{font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--signal);margin-bottom:10px}
+.vs{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink);margin:0 0 20px}
+.vs div{padding:12px 16px 4px 0}
+.vs div+div{padding-left:16px;border-left:1px solid var(--hair)}
+.vs .cap{display:block;margin-bottom:6px}
+.vs p{margin:0;font-size:15px;color:var(--ink)}
+.vs div:first-child p{color:var(--mute);text-decoration:line-through;text-decoration-color:var(--hair)}
+@media (max-width:420px){.vs{grid-template-columns:1fr}.vs div+div{padding-left:0;border-left:0;border-top:1px solid var(--hair)}}
+.panel h3{font-family:var(--serif);font-weight:300;font-size:clamp(24px,2.8vw,34px);line-height:1.12;margin:0 0 14px;text-wrap:balance}
+.panel p{margin:0 0 16px;color:var(--mute);max-width:52ch}
+.panel ul{list-style:none;margin:0 0 20px;padding:0;display:grid;gap:8px}
+.panel li{display:flex;gap:10px;font-size:15px}
+.panel li::before{content:"";flex:none;width:14px;height:1px;background:var(--ink);margin-top:12px}
+.price{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.price strong{font-family:var(--serif);font-weight:400;font-size:24px}
+.panel .ctas{display:flex;flex-wrap:wrap;gap:10px}
+.film{position:relative;aspect-ratio:16/10;max-width:100%;background:var(--steel);border:1px solid var(--hair);overflow:hidden}
+.film video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.film .ph{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:space-between;padding:14px;font-size:11px;letter-spacing:.07em;text-transform:uppercase;color:var(--mute)}
+.film .ph svg{align-self:center;width:46%;height:auto}
+.film .ph .r{display:flex;justify-content:space-between}
+
+/* how */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--hair)}
+.steps div{padding:22px 20px 0 0;border-right:1px solid var(--hair);margin-right:20px}
+.steps div:last-child{border-right:0;margin-right:0}
+.steps h4{font-family:var(--serif);font-weight:400;font-size:22px;margin:12px 0 8px}
+.steps p{margin:0;color:var(--mute);font-size:15px}
+@media (max-width:900px){.steps{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:28px}.steps div:nth-child(2){border-right:0;margin-right:0}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}.steps div{border-right:0;margin-right:0}}
+
+/* kits */
+.kits{border-top:1px solid var(--hair)}
+.kit{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,2fr) minmax(0,1fr);gap:20px;padding:20px 0;border-bottom:1px solid var(--hair);align-items:baseline}
+.kit h4{font-family:var(--serif);font-weight:400;font-size:22px;margin:0}
+.kit p{margin:0;color:var(--mute);font-size:15px}
+.kit .amt{justify-self:end;text-align:right;font-variant-numeric:tabular-nums;font-weight:500}
+@media (max-width:760px){.kit{grid-template-columns:1fr;gap:4px}.kit .amt{justify-self:start;text-align:left}}
+.fine{font-size:13px;color:var(--mute);margin-top:16px}
+
+/* founder */
+.founder{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px;align-items:start}
+.founder blockquote{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(24px,3vw,38px);line-height:1.2;letter-spacing:-.01em;max-width:30ch}
+.founder .who{margin-top:24px}
+@media (max-width:760px){.founder{grid-template-columns:1fr}}
+
+/* contact */
+.steel{background:var(--steel)}
+.contact{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);gap:clamp(24px,5vw,72px)}
+@media (max-width:860px){.contact{grid-template-columns:1fr}}
+.direct{display:grid;gap:18px;margin-top:28px}
+.direct>div{border-top:1px solid var(--ink);padding-top:10px}
+.direct .v{font-size:18px;user-select:all}
+form{display:grid;gap:18px}
+.fld{display:grid;gap:6px}
+.fld label{font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.fld input,.fld select,.fld textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--ink);border-radius:0;padding:8px 0;width:100%}
+.fld textarea{min-height:96px;resize:vertical}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:520px){.two{grid-template-columns:1fr}}
+.status{font-size:14px;min-height:1.4em}
+.hp{position:absolute;left:-9999px}
+footer{border-top:1px solid var(--ink)}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;padding-block:22px max(22px,env(safe-area-inset-bottom,0px))}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}.js .loader{display:none}}
+</style>
+</head>
+<body>
+<div class="loader" aria-hidden="true"><div class="tick"><span id="count">00</span></div></div>
+
+<header>
+  <div class="wrap bar">
+    <a class="wordmark" href="#top" aria-label="Mantle home">MANTLE</a>
+    <nav aria-label="Main">
+      <a class="cap" href="#who">Who we serve</a>
+      <a class="cap" href="#how">How it works</a>
+      <a class="cap" href="#kits">Kits</a>
+      <a class="pill" href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="wrap hero">
+    <div class="tags" aria-label="What we film"><span>Unbuilt</span><i></i><span>Unseen</span><i></i><span>Unlaunched</span></div>
+    <h1>We film what you can't film yet.</h1>
+    <p class="sub">Mantle makes AI films for real estate projects still on paper, factory processes no one can shoot, and products that haven't launched.</p>
+    <div class="ctas">
+      <a class="pill solid" id="heroCta" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20a%20free%2015-second%20clip." target="_blank" rel="noopener">Get a free 15s clip →</a>
+      <a class="pill" href="#who">Which one are you?</a>
+    </div>
+    <figure class="figure" id="figure" aria-label="Wireframe of a 2 BHK floor plan rising into 3D">
+      <div id="fit"><div id="plan"></div></div>
+      <figcaption>Fig. 01 · Sample 2 BHK, 469 sq ft carpet. A flat plan becomes a space buyers can walk through.</figcaption>
+      <button class="pill replay" type="button" id="replay">Replay</button>
+    </figure>
+  </section>
+
+  <section class="block" id="who">
+    <div class="wrap">
+      <div class="sec-head"><span class="cap mute">Who we serve</span><h2>Which one are you?</h2></div>
+      <div class="rows">
+
+        <div class="row" data-k="dev" data-open>
+          <button aria-expanded="true" aria-controls="p-dev"><span class="no">01</span><span class="name">Developer</span><span class="cap mute c3">Real estate</span><span class="cap mute c4">Walkthroughs · launch films</span><span class="more cap">More</span></button>
+          <div class="panel" id="p-dev">
+            <div>
+              <div class="prob">The problem</div>
+              <h3>Your buyers can't wait for the building. Neither should your marketing.</h3>
+              <p>Most projects sell off a brochure and a sample flat, because a walkthrough film means a render studio, weeks of back and forth, and a big bill. Send us your floor plan instead.</p>
+              <div class="vs"><div><span class="cap mute">The old way</span><p>Render studio, weeks of waiting, a budget that kills the idea</p></div><div><span class="cap">With Mantle</span><p>Send a floor plan. Your walkthrough film is ready in days.</p></div></div>
+              <p>Every film carries a slot for your MahaRERA number and QR, or your Trakheesi permit in Dubai.</p>
+              <ul><li>60–90s plan-to-walkthrough film</li><li>Project teaser and 6 reels</li><li>12 launch posters</li></ul>
+              <div class="price"><span class="cap mute">Launch Kit from</span><strong>₹1.8 L</strong></div>
+              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20here%27s%20my%20floor%20plan%20for%20a%20free%20clip." target="_blank" rel="noopener">Send your floor plan →</a><a class="pill" href="#contact" data-pick="Developer">Use the form</a></div>
+            </div>
+            <div class="film"><video muted loop playsinline preload="none" data-src="videos/developer.mp4"></video>
+              <div class="ph"><div class="r"><span>Film 01</span><span>Plan to walkthrough</span></div>
+                <svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="1"><path d="M10 50 60 25 110 50 60 75Z"/><path d="M10 50V36L60 11 110 36V50M60 11V25M35 23.5V37.5M85 23.5V37.5"/></svg>
+                <div class="r"><span>Sample on request</span><span>45s</span></div></div></div>
+          </div>
+        </div>
+
+        <div class="row" data-k="mfg">
+          <button aria-expanded="false" aria-controls="p-mfg"><span class="no">02</span><span class="name">Manufacturer</span><span class="cap mute c3">Plants and industry</span><span class="cap mute c4">Training · SOP films</span><span class="more cap">More</span></button>
+          <div class="panel" id="p-mfg">
+            <div>
+              <div class="prob">The problem</div>
+              <h3>Training every new worker by hand is the most expensive habit in your plant.</h3>
+              <p>Senior staff repeat the same lesson every batch, the line slows while they teach, and the know-how walks out when they leave. Filming it the usual way means stopping production for a crew.</p>
+              <div class="vs"><div><span class="cap mute">The old way</span><p>Trainers repeat it every shift, or the line stops for a shoot</p></div><div><span class="cap">With Mantle</span><p>One SOP film, every shift, in Marathi, Hindi, English or Arabic</p></div></div>
+              <p>Made from photos of your line, without stopping it. Your plant expert signs off every technical step before delivery.</p>
+              <ul><li>Machine and process SOPs</li><li>Safety and onboarding films</li><li>Multi-language versions with captions</li></ul>
+              <div class="price"><span class="cap mute">Training Kit</span><strong>Quoted per finished minute</strong></div>
+              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20training%20or%20SOP%20videos%20for%20our%20plant." target="_blank" rel="noopener">Send a photo of your line →</a><a class="pill" href="#contact" data-pick="Manufacturer">Use the form</a></div>
+            </div>
+            <div class="film"><video muted loop playsinline preload="none" data-src="videos/manufacturer.mp4"></video>
+              <div class="ph"><div class="r"><span>Film 02</span><span>Machine SOP</span></div>
+                <svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="1"><circle cx="40" cy="44" r="18"/><circle cx="40" cy="44" r="6"/><circle cx="80" cy="34" r="12"/><circle cx="80" cy="34" r="4"/><path d="M10 70H110"/></svg>
+                <div class="r"><span>Sample on request</span><span>Marathi · 60s</span></div></div></div>
+          </div>
+        </div>
+
+        <div class="row" data-k="brand">
+          <button aria-expanded="false" aria-controls="p-brand"><span class="no">03</span><span class="name">Brand or other</span><span class="cap mute c3">D2C and products</span><span class="cap mute c4">Hero films · ad sets</span><span class="more cap">More</span></button>
+          <div class="panel" id="p-brand">
+            <div>
+              <div class="prob">The problem</div>
+              <h3>Your launch shouldn't wait for a studio, a crew and a free date.</h3>
+              <p>A proper launch video means booking a studio, hiring a crew and models, and reshooting when one thing is off. By the time it's edited, launch week has gone.</p>
+              <div class="vs"><div><span class="cap mute">The old way</span><p>Studio booking, crew, models, reshoots, and one video to show for it</p></div><div><span class="cap">With Mantle</span><p>Send a product photo. Get a hero film and 10 ad variants.</p></div></div>
+              <p>Works from a photo, a render or a sketch, so you can launch before stock even lands.</p>
+              <ul><li>Hero product film</li><li>10 ad variants for Meta and YouTube</li><li>Vertical, square and wide cuts</li></ul>
+              <div class="price"><span class="cap mute">Product Kit from</span><strong>₹1 L</strong></div>
+              <div class="ctas"><a class="pill solid" href="https://wa.me/919834437383?text=Hi%20Mantle%2C%20I%27d%20like%20a%20product%20film." target="_blank" rel="noopener">Send your product shot →</a><a class="pill" href="#contact" data-pick="Brand or other">Use the form</a></div>
+            </div>
+            <div class="film"><video muted loop playsinline preload="none" data-src="videos/brand.mp4"></video>
+              <div class="ph"><div class="r"><span>Film 03</span><span>Product hero</span></div>
+                <svg viewBox="0 0 120 80" fill="none" stroke="currentColor" stroke-width="1"><path d="M48 18h24v8l6 6v40H42V32l6-6z"/><path d="M42 44h36"/></svg>
+                <div class="r"><span>Sample on request</span><span>30s</span></div></div></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="how">
+    <div class="wrap">
+      <div class="sec-head"><span class="cap mute">How it works</span><h2>Two approvals before anything expensive happens.</h2></div>
+      <div class="steps">
+        <div><span class="cap mute">01</span><h4>Free spec clip</h4><p>Send one plan, line photo or product shot. Get 15 seconds back, free.</p></div>
+        <div><span class="cap mute">02</span><h4>Script</h4><p>You approve the words and shot list before we make anything.</p></div>
+        <div><span class="cap mute">03</span><h4>Look</h4><p>You approve 3 to 5 still frames, so the film matches your plans and brand.</p></div>
+        <div><span class="cap mute">04</span><h4>Film</h4><p>Delivered in wide, vertical and square, with two rounds of revisions.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="kits">
+    <div class="wrap">
+      <div class="sec-head"><span class="cap mute">Kits</span><h2>Start small. Scale when it works.</h2></div>
+      <div class="kits">
+        <div class="kit"><h4>Proof Sprint</h4><p>One 30–60s film in 5 working days. Fully credited to any kit you book within 30 days.</p><span class="amt">₹25,000</span></div>
+        <div class="kit"><h4>Launch Kit</h4><p>Walkthrough film, teaser, reels and posters for a project launch.</p><span class="amt">from ₹1.8 L</span></div>
+        <div class="kit"><h4>Training Kit</h4><p>SOP and training films, priced by finished minute and language.</p><span class="amt">on quote</span></div>
+        <div class="kit"><h4>Product Kit</h4><p>Hero product film and 10 ad variants.</p><span class="amt">from ₹1 L</span></div>
+        <div class="kit"><h4>Monthly engine</h4><p>Ongoing films, ad management and reporting. Three-month minimum.</p><span class="amt">from ₹80,000/mo</span></div>
+      </div>
+      <p class="fine">Prices exclude GST and ad spend. UAE projects are quoted in AED.</p>
+    </div>
+  </section>
+
+  <section class="block" id="founder">
+    <div class="wrap founder">
+      <span class="cap mute">Founder</span>
+      <div>
+        <blockquote>I've sat across from developers with a great project and nothing to show for it, because nothing existed yet. Mantle is the fix. If it's on paper, on a machine or in a sketch, we'll put it on screen.</blockquote>
+        <div class="who"><div class="cap">Pranav Harkal</div><div class="cap mute">Founder · Pune · Dubai</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block steel" id="contact">
+    <div class="wrap contact">
+      <div>
+        <span class="cap mute">Contact</span>
+        <h2 style="font-family:var(--serif);font-weight:300;font-size:clamp(28px,4vw,48px);line-height:1.08;margin:12px 0 0;text-wrap:balance">Send one plan, photo or product shot. Get a free 15-second clip.</h2>
+        <div class="direct">
+          <div><div class="cap mute">WhatsApp</div><div class="v">+91 98344 37383</div></div>
+          <div><div class="cap mute">Email</div><div class="v">harkalpranav49@gmail.com</div></div>
+          <div><div class="cap mute">Studio</div><div class="v">Pune · Dubai</div></div>
+        </div>
+      </div>
+      <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="form">
+        <input type="hidden" name="form-name" value="contact">
+        <p class="hp"><label>Leave this empty <input name="bot-field" id="bot-field"></label></p>
+        <div class="two">
+          <div class="fld"><label for="f-name">Name*</label><input id="f-name" name="name" required autocomplete="name" placeholder="Priya Deshmukh"></div>
+          <div class="fld"><label for="f-phone">WhatsApp number*</label><input id="f-phone" name="phone" required type="tel" autocomplete="tel" placeholder="+91 98xxx xxxxx"></div>
+        </div>
+        <div class="two">
+          <div class="fld"><label for="f-email">Email</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="priya@company.com"></div>
+          <div class="fld"><label for="f-type">I am a</label><select id="f-type" name="type"><option>Developer</option><option>Manufacturer</option><option>Brand or other</option></select></div>
+        </div>
+        <div class="fld"><label for="f-msg">What are you building?</label><textarea id="f-msg" name="message" placeholder="A 2 and 3 BHK project in Baner, launching in March."></textarea></div>
+        <div style="display:flex;flex-wrap:wrap;align-items:center;gap:16px"><button class="pill solid" type="submit">Send message</button><span class="status" id="status" role="status"></span></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap"><span class="cap mute">© 2026 Mantle, a brand of Hark and Co.</span><span class="cap mute">Pune · Dubai</span></div></footer>
+
+<script>
+(()=>{
+const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* loader: counts to 100 in under a second, then the figure builds */
+const count=document.getElementById('count');
+function done(){document.documentElement.classList.add('loaded');build();}
+if(reduce){done();}else{let n=0;const t=setInterval(()=>{n=Math.min(100,n+7);count.textContent=String(n).padStart(2,'0');if(n>=100){clearInterval(t);setTimeout(done,120);}},45);}
+
+/* wireframe figure */
+const plan=document.getElementById('plan'),fit=document.getElementById('fit'),fig=document.getElementById('figure');
+const el=(cls,css,vars)=>{const d=document.createElement('div');d.className=cls;Object.assign(d.style,css);if(vars)for(const k in vars)d.style.setProperty(k,vars[k]);plan.appendChild(d);return d;};
+const px=v=>v+'px';
+[['Living',0,0,240,170],['Kitchen',240,0,160,110],['',240,110,80,80],['Bath',320,110,80,80],['Bed 1',0,170,170,130],['Bed 2',170,170,150,130],['Balcony',320,190,80,110]]
+ .forEach(([n,x,y,w,h])=>{const r=el('room',{left:px(x),top:px(y),width:px(w),height:px(h)});if(n)r.innerHTML='<b>'+n+'</b>';});
+function box(x,y,w,d,h,prog){const S='var('+prog+',1)';
+  el('f fh',{left:px(x),top:px(y+d-h),width:px(w),height:px(h)},{'--s':S});
+  el('f fh',{left:px(x),top:px(y-h),width:px(w),height:px(h)},{'--s':S});
+  el('f fv',{left:px(x+w-h),top:px(y),width:px(h),height:px(d)},{'--s':S});
+  el('f fv',{left:px(x-h),top:px(y),width:px(h),height:px(d)},{'--s':S});
+  el('top',{left:px(x),top:px(y),width:px(w),height:px(d)},{'--h':h,'--t':S});}
+const H=58,T=6;
+[[0,0,400,0],[400,0,400,300],[0,300,400,300],[0,0,0,300],[240,0,240,60],[290,110,400,110],[320,140,320,190],
+ [0,170,110,170],[150,170,210,170],[250,170,320,170],[170,170,170,300],[320,190,400,190],[320,230,320,300]]
+ .forEach(([x1,y1,x2,y2])=>{y1===y2?box(Math.min(x1,x2)-T/2,y1-T/2,Math.abs(x2-x1)+T,T,H,'--wp'):box(x1-T/2,Math.min(y1,y2)-T/2,T,Math.abs(y2-y1)+T,H,'--wp');});
+[[18,22,118,38,14],[60,86,54,30,8],[252,10,136,26,18],[20,196,92,82,12],[188,204,96,74,12],[334,124,46,24,10]]
+ .forEach(([x,y,w,d,h])=>box(x,y,w,d,h,'--fp'));
+
+const cl=v=>Math.max(0,Math.min(1,v)),ez=t=>t<.5?2*t*t:1-Math.pow(-2*t+2,2)/2;
+function set(p){const s=plan.style;s.setProperty('--r',ez(cl(p/.45)));s.setProperty('--wp',ez(cl((p-.35)/.4)));s.setProperty('--fp',ez(cl((p-.7)/.3)));}
+function fitIt(){const sc=Math.min(1.25,(fig.clientWidth-16)/560,(fig.clientHeight-70)/380);fit.style.transform='scale('+sc+')';}
+let raf=0,t0=0;
+function build(){cancelAnimationFrame(raf);if(reduce){set(1);return;}t0=performance.now();
+  const step=t=>{const e=t-t0,p=cl(e/3200);set(p);
+    if(p>=1){plan.style.setProperty('--drift',(Math.sin((e-3200)/2600)*5).toFixed(2)+'deg');}
+    raf=requestAnimationFrame(step);};raf=requestAnimationFrame(step);}
+set(1);fitIt();addEventListener('resize',fitIt);
+document.getElementById('replay').addEventListener('click',e=>{e.stopPropagation();build();});
+
+/* who rows: one open at a time; opening a row also rewrites the hero button */
+const hero=document.getElementById('heroCta');
+const heroText={dev:['Send your floor plan →','Hi%20Mantle%2C%20here%27s%20my%20floor%20plan%20for%20a%20free%20clip.'],
+  mfg:['Send a photo of your line →','Hi%20Mantle%2C%20I%27d%20like%20training%20or%20SOP%20videos%20for%20our%20plant.'],
+  brand:['Send your product shot →','Hi%20Mantle%2C%20I%27d%20like%20a%20product%20film.']};
+const rows=[...document.querySelectorAll('.row')];
+function loadFilm(row){row.querySelectorAll('video[data-src]').forEach(v=>{if(v.src)return;v.src=v.dataset.src;
+  v.addEventListener('loadeddata',()=>{v.parentElement.querySelector('.ph').hidden=true;v.play().catch(()=>{});},{once:true});
+  v.addEventListener('error',()=>{v.hidden=true;},{once:true});});}
+rows.forEach(r=>r.querySelector('button').addEventListener('click',()=>{
+  const open=r.hasAttribute('data-open');
+  rows.forEach(x=>{x.removeAttribute('data-open');x.querySelector('button').setAttribute('aria-expanded','false');});
+  if(!open){r.setAttribute('data-open','');r.querySelector('button').setAttribute('aria-expanded','true');loadFilm(r);
+    const h=heroText[r.dataset.k];hero.textContent=h[0];hero.href='https://wa.me/919834437383?text='+h[1];}
+}));
+loadFilm(rows[0]);
+document.querySelectorAll('[data-pick]').forEach(a=>a.addEventListener('click',()=>{document.getElementById('f-type').value=a.dataset.pick;}));
+
+/* form: Netlify stores submissions; anywhere else it says so plainly */
+const form=document.getElementById('form'),status=document.getElementById('status');
+form.addEventListener('submit',async e=>{e.preventDefault();
+  if(!form.reportValidity())return;
+  status.textContent='Sending…';
+  try{const r=await fetch('/',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded'},body:new URLSearchParams(new FormData(form)).toString()});
+    if(!r.ok)throw 0;form.reset();status.textContent="Sent. We'll reply on WhatsApp within a day.";}
+  catch{status.textContent="Couldn't send right now. Message us on WhatsApp at +91 98344 37383.";}
+});
+})();
+</script>
+</body>
+</html>
