@@ -16,7 +16,8 @@ $$('.shots').forEach(strip=>{
   const dur=1800;strip.style.setProperty('--dur',dur+'ms');
   let i=-1,timer=0,running=false;
   function next(){
-    if(i>=0){shots[i].classList.remove('active');shots[i].classList.add('seen');}
+    if(i>=0&&i<shots.length){shots[i].classList.remove('active');shots[i].classList.add('seen');}
+    if(i>=shots.length){shots.forEach(s=>s.classList.remove('seen'));i=-1;}
     i++;
     if(i>=shots.length){timer=setTimeout(()=>{shots.forEach(s=>s.classList.remove('seen'));i=-1;next();},1200);return;}
     shots[i].classList.add('active');timer=setTimeout(next,dur);

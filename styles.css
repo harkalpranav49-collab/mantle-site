@@ -287,7 +287,8 @@ section.block{padding-block:clamp(72px,9vw,136px)}
 @media (max-width:900px){.contact-split{grid-template-columns:1fr;min-height:0}}
 .direct{display:grid;margin-top:56px;border-top:1px solid var(--line-d)}
 .direct>div{border-bottom:1px solid var(--line-d);padding:16px 0;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:baseline}
-.direct .v{font-size:18px}
+.direct .v{font-size:18px;min-width:0;overflow-wrap:anywhere}
+@media (max-width:480px){.direct>div{grid-template-columns:1fr;gap:4px}}
 .direct a.v{text-underline-offset:4px;text-decoration-thickness:1px}
 .direct a.v:hover{color:var(--blue)}
 form{display:grid;gap:24px;max-width:560px}
