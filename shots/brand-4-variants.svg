@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <g id="b">
+      <path d="M150 62L150 72C150 78 128 82 128 96L128 164Q128 172 136 172L184 172Q192 172 192 164L192 96C192 82 170 78 170 72L170 62Z" fill="#5C6873"/>
+      <rect x="146" y="28" width="28" height="34" rx="3" fill="#F5F5F3"/>
+      <rect x="132" y="112" width="56" height="36" fill="#4169E1"/>
+    </g>
+  </defs>
+  <rect width="320" height="200" fill="#20252B"/>
+  <!-- 9:16 -->
+  <rect x="22" y="22" width="76" height="135" rx="6" fill="#0E1115"/>
+  <circle cx="60" cy="74" r="26" fill="#7D98EE"/>
+  <use href="#b" transform="translate(37 34) scale(.29)"/>
+  <rect x="34" y="134" width="52" height="12" rx="6" fill="#4169E1"/>
+  <!-- 1:1 -->
+  <rect x="112" y="52" width="96" height="96" rx="6" fill="#F5F5F3"/>
+  <circle cx="176" cy="98" r="30" fill="#7D98EE"/>
+  <use href="#b" transform="translate(130 60) scale(.42)"/>
+  <rect x="122" y="128" width="40" height="10" rx="5" fill="#0E1115"/>
+  <!-- 16:9 -->
+  <rect x="222" y="74" width="82" height="46" rx="6" fill="#0E1115"/>
+  <circle cx="282" cy="97" r="16" fill="#7D98EE"/>
+  <use href="#b" transform="translate(243 79) scale(.22)"/>
+  <rect x="230" y="104" width="30" height="8" rx="4" fill="#4169E1"/>
+  <g fill="#F5F5F3" font-size="7" font-weight="700" letter-spacing=".8" text-anchor="middle">
+    <text x="60" y="174">9:16 · REELS</text><text x="160" y="174">1:1 · FEED</text><text x="263" y="174">16:9 · YOUTUBE</text>
+  </g>
+  <rect x="104" y="184" width="112" height="12" rx="6" fill="#4169E1"/>
+  <text x="160" y="192.5" text-anchor="middle" fill="#fff" font-size="6.5" font-weight="700" letter-spacing=".8">10 AD VARIANTS</text>
+</svg>
