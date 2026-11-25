@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="Helvetica, Arial, sans-serif">
+  <defs><pattern id="g" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M10 0H0V10" fill="none" stroke="#D3D7DB" stroke-width=".5"/></pattern></defs>
+  <rect width="320" height="200" fill="#F5F5F3"/><rect width="320" height="200" fill="url(#g)"/>
+  <g fill="#F5F5F3" stroke="#0E1115" stroke-width="1.4">
+    <rect x="30" y="140" width="260" height="10"/>
+    <rect x="40" y="150" width="6" height="26"/><rect x="274" y="150" width="6" height="26"/>
+    <rect x="150" y="50" width="10" height="90"/><rect x="220" y="50" width="10" height="90"/>
+    <rect x="145" y="40" width="90" height="18"/><rect x="175" y="58" width="30" height="37"/>
+    <rect x="170" y="128" width="40" height="10"/>
+    <rect x="250" y="80" width="35" height="35" rx="3"/><rect x="264" y="115" width="6" height="25"/>
+  </g>
+  <g fill="none" stroke="#0E1115" stroke-width="1"><circle cx="60" cy="145" r="4"/><circle cx="100" cy="145" r="4"/><circle cx="140" cy="145" r="4"/><circle cx="240" cy="145" r="4"/></g>
+  <rect x="62" y="118" width="30" height="22" fill="#0E1115"/>
+  <!-- guard -->
+  <rect x="161" y="62" width="58" height="64" fill="#7D98EE" fill-opacity=".18" stroke="#4169E1" stroke-width="1.4" stroke-dasharray="4 3"/>
+  <!-- motion arrow -->
+  <path d="M190 98V120M185 114L190 121L195 114" fill="none" stroke="#4169E1" stroke-width="1.6"/>
+  <circle cx="261" cy="92" r="5" fill="#4169E1"/><circle cx="275" cy="92" r="5" fill="#F5F5F3" stroke="#0E1115"/>
+  <!-- callouts -->
+  <g stroke="#4169E1" stroke-width="1" fill="none"><path d="M161 74H118L108 64"/><path d="M261 92V60L270 50"/><path d="M80 140L70 168"/></g>
+  <g fill="#4169E1"><circle cx="100" cy="58" r="9"/><circle cx="278" cy="44" r="9"/><circle cx="66" cy="176" r="9"/></g>
+  <g fill="#fff" font-size="9" font-weight="700" text-anchor="middle"><text x="100" y="61.5">1</text><text x="278" y="47.5">2</text><text x="66" y="179.5">3</text></g>
+  <g fill="#0E1115" font-size="7" font-weight="700" letter-spacing=".6">
+    <text x="20" y="40">LOCK THE GUARD</text><text x="226" y="26">PRESS START</text><text x="80" y="188">CLEAR THE BELT</text>
+  </g>
+</svg>

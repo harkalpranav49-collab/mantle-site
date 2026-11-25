@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#7D98EE" stop-opacity=".55"/><stop offset="1" stop-color="#7D98EE" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="320" height="200" fill="#20252B"/>
+  <!-- control panel close-up -->
+  <rect x="70" y="44" width="180" height="140" rx="10" fill="#F5F5F3"/>
+  <rect x="82" y="56" width="156" height="30" rx="4" fill="#0E1115"/>
+  <text x="92" y="75" fill="#7D98EE" font-size="9" font-weight="700" letter-spacing="1">GUARD LOCKED ✓</text>
+  <circle cx="125" cy="130" r="38" fill="url(#glow)"/>
+  <circle cx="125" cy="130" r="22" fill="#0E1115"/>
+  <circle cx="125" cy="130" r="17" fill="#F5F5F3" stroke="#0E1115" stroke-width="2"/>
+  <text x="125" y="133" text-anchor="middle" fill="#0E1115" font-size="7.5" font-weight="700" letter-spacing=".6">START</text>
+  <circle cx="195" cy="130" r="22" fill="#0E1115"/>
+  <circle cx="195" cy="130" r="17" fill="#4169E1"/>
+  <text x="195" y="133" text-anchor="middle" fill="#fff" font-size="7.5" font-weight="700" letter-spacing=".6">STOP</text>
+  <!-- finger -->
+  <path d="M132 200V150C132 144 142 144 142 150V164C142 158 152 158 152 164V168C152 162 162 162 162 168V200Z" fill="#D3D7DB" stroke="#788895" stroke-width="1.2"/>
+  <!-- step bar -->
+  <rect x="0" y="0" width="320" height="30" fill="#0E1115"/>
+  <text x="14" y="19" fill="#7D98EE" font-size="8" font-weight="700" letter-spacing="1">STEP 3 / 7</text>
+  <text x="70" y="19" fill="#F5F5F3" font-size="8" letter-spacing=".3">Press START only after the guard locks</text>
+  <g fill="#F5F5F3" fill-opacity=".25"><rect x="14" y="36" width="38" height="3" rx="1.5"/><rect x="56" y="36" width="38" height="3" rx="1.5"/><rect x="98" y="36" width="38" height="3" rx="1.5"/><rect x="140" y="36" width="38" height="3" rx="1.5"/><rect x="182" y="36" width="38" height="3" rx="1.5"/><rect x="224" y="36" width="38" height="3" rx="1.5"/><rect x="266" y="36" width="40" height="3" rx="1.5"/></g>
+  <g fill="#7D98EE"><rect x="14" y="36" width="38" height="3" rx="1.5"/><rect x="56" y="36" width="38" height="3" rx="1.5"/><rect x="98" y="36" width="20" height="3" rx="1.5"/></g>
+</svg>

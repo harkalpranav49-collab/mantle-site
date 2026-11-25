@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000" role="img" aria-label="Serum bottle on a plinth under a studio spotlight">
+  <defs>
+    <radialGradient id="spot" cx=".5" cy=".38" r=".62">
+      <stop offset="0" stop-color="#2C333B"/><stop offset=".55" stop-color="#14181D"/><stop offset="1" stop-color="#090B0E"/>
+    </radialGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#F5F5F3" stop-opacity=".16"/><stop offset="1" stop-color="#F5F5F3" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#14181D"/><stop offset=".18" stop-color="#3A424B"/><stop offset=".32" stop-color="#20252B"/><stop offset=".78" stop-color="#14181D"/><stop offset=".94" stop-color="#4169E1"/><stop offset="1" stop-color="#20252B"/>
+    </linearGradient>
+    <linearGradient id="cap" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#788895"/><stop offset=".3" stop-color="#F5F5F3"/><stop offset=".55" stop-color="#BFC5CB"/><stop offset="1" stop-color="#5C6873"/>
+    </linearGradient>
+    <linearGradient id="plinth" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#0E1115"/><stop offset=".4" stop-color="#2C333B"/><stop offset="1" stop-color="#0E1115"/>
+    </linearGradient>
+    <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#fff" stop-opacity=".25"/><stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="reflMask"><rect x="0" y="830" width="1600" height="170" fill="url(#fade)"/></mask>
+    <g id="bottle">
+      <path d="M150 62L150 72C150 78 128 82 128 96L128 164Q128 172 136 172L184 172Q192 172 192 164L192 96C192 82 170 78 170 72L170 62Z" fill="url(#glass)"/>
+      <path d="M134 100C134 90 140 86 145 84V162C139 162 134 158 134 152Z" fill="#F5F5F3" opacity=".22"/>
+      <rect x="185" y="98" width="2" height="62" fill="#7D98EE" opacity=".8"/>
+      <rect x="146" y="28" width="28" height="34" rx="2" fill="url(#cap)"/>
+      <rect x="146" y="56" width="28" height="6" fill="#5C6873"/>
+      <rect x="133" y="110" width="54" height="42" fill="#F5F5F3"/>
+      <text x="160" y="129" text-anchor="middle" font-family="Georgia, serif" font-size="10" fill="#090B0E" letter-spacing=".5">SAFFRA</text>
+      <rect x="150" y="134" width="20" height=".6" fill="#090B0E"/>
+      <text x="160" y="143" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="3.6" fill="#56636E" letter-spacing=".6">FACE SERUM · 30 ML</text>
+    </g>
+  </defs>
+
+  <rect width="1600" height="1000" fill="url(#spot)"/>
+  <polygon points="700,0 900,0 1180,830 420,830" fill="url(#beam)"/>
+
+  <!-- plinth -->
+  <rect x="560" y="830" width="480" height="170" fill="url(#plinth)"/>
+  <ellipse cx="800" cy="830" rx="240" ry="34" fill="#2C333B"/>
+  <ellipse cx="800" cy="830" rx="240" ry="34" fill="none" stroke="#5C6873" stroke-width="2"/>
+
+  <!-- bottle + reflection -->
+  <ellipse cx="800" cy="832" rx="150" ry="18" fill="#090B0E" opacity=".6"/>
+  <use href="#bottle" transform="translate(800 470) scale(4.2) translate(-160 -86)"/>
+  <g mask="url(#reflMask)"><use href="#bottle" transform="translate(800 1190) scale(4.2 -4.2) translate(-160 -86)"/></g>
+
+  <!-- droplets -->
+  <g fill="#F5F5F3" opacity=".85"><circle cx="560" cy="300" r="9"/><circle cx="520" cy="370" r="5"/><circle cx="1080" cy="250" r="12"/><circle cx="1120" cy="330" r="6"/><circle cx="1050" cy="420" r="4"/></g>
+  <g fill="#4169E1"><circle cx="1083" cy="246" r="3"/><circle cx="563" cy="297" r="2.5"/></g>
+
+  <!-- floor line -->
+  <rect x="0" y="998" width="1600" height="2" fill="#20252B"/>
+</svg>

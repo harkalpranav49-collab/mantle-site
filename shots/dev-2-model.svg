@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <pattern id="g" width="14" height="14" patternUnits="userSpaceOnUse"><path d="M14 0H0V14" fill="none" stroke="#F5F5F3" stroke-opacity=".08"/></pattern>
+    <g id="walls" fill="none" stroke-linecap="square">
+      <path vector-effect="non-scaling-stroke" d="M0 0H400V300H0Z"/><path vector-effect="non-scaling-stroke" d="M240 0V60M290 110H400M320 140V190M0 170H110M150 170H210M250 170H320M170 170V300M320 190H400M320 230V300"/>
+    </g>
+  </defs>
+  <rect width="320" height="200" fill="#0E1115"/><rect width="320" height="200" fill="url(#g)"/>
+  <!-- back walls, inner faces -->
+  <polygon points="145,52 266.2,122 266.2,94 145,24" fill="#F5F5F3" fill-opacity=".16"/>
+  <polygon points="145,52 54.1,104.5 54.1,76.5 145,24" fill="#F5F5F3" fill-opacity=".26"/>
+  <!-- floor -->
+  <g transform="translate(145 52) matrix(.866 .5 -.866 .5 0 0) scale(.35)">
+    <rect width="400" height="300" fill="#F5F5F3" fill-opacity=".12"/>
+    <use href="#walls" stroke="#F5F5F3" stroke-width="1.2" vector-effect="non-scaling-stroke" opacity=".9"/>
+    <!-- furniture -->
+    <g fill="#4169E1"><rect x="18" y="22" width="118" height="38"/><rect x="252" y="10" width="136" height="26"/><rect x="20" y="196" width="92" height="82"/><rect x="188" y="204" width="96" height="74"/><rect x="334" y="124" width="46" height="24"/><rect x="60" y="86" width="54" height="30"/></g>
+  </g>
+  <g transform="translate(145 46) matrix(.866 .5 -.866 .5 0 0) scale(.35)">
+    <g fill="#7D98EE"><rect x="18" y="22" width="118" height="38"/><rect x="252" y="10" width="136" height="26"/><rect x="20" y="196" width="92" height="82"/><rect x="188" y="204" width="96" height="74"/><rect x="334" y="124" width="46" height="24"/><rect x="60" y="86" width="54" height="30"/></g>
+  </g>
+  <!-- walls rising: stacked outlines -->
+  <g transform="translate(145 45) matrix(.866 .5 -.866 .5 0 0) scale(.35)"><use href="#walls" stroke="#F5F5F3" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".25"/></g>
+  <g transform="translate(145 38) matrix(.866 .5 -.866 .5 0 0) scale(.35)"><use href="#walls" stroke="#F5F5F3" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".35"/></g>
+  <g transform="translate(145 31) matrix(.866 .5 -.866 .5 0 0) scale(.35)"><use href="#walls" stroke="#F5F5F3" stroke-width="1" vector-effect="non-scaling-stroke" opacity=".5"/></g>
+  <g transform="translate(145 24) matrix(.866 .5 -.866 .5 0 0) scale(.35)"><use href="#walls" stroke="#F5F5F3" stroke-width="1.6" vector-effect="non-scaling-stroke"/></g>
+  <!-- corner posts -->
+  <g stroke="#F5F5F3" stroke-width="1.2"><path d="M145 52V24M266.2 122V94M175.3 174.5V146.5M54.1 104.5V76.5"/></g>
+  <rect x="14" y="14" width="74" height="15" rx="7.5" fill="#4169E1"/>
+  <text x="51" y="24.5" text-anchor="middle" fill="#fff" font-size="7" font-weight="700" letter-spacing=".8">3D MODEL</text>
+  <text x="306" y="190" text-anchor="end" fill="#A3ADB6" font-size="6.5" letter-spacing="1">WALLS 2.9 M · FURNISHED</text>
+</svg>

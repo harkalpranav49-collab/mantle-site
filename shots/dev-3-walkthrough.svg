@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#F5F5F3" stop-opacity=".35"/><stop offset="1" stop-color="#F5F5F3" stop-opacity="0"/></linearGradient>
+    <radialGradient id="glow" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#F5F5F3" stop-opacity=".5"/><stop offset="1" stop-color="#F5F5F3" stop-opacity="0"/></radialGradient>
+  </defs>
+  <!-- room shell -->
+  <polygon points="0,0 320,0 210,55 110,55" fill="#20252B"/>
+  <polygon points="0,0 110,55 110,130 0,200" fill="#2C333B"/>
+  <polygon points="320,0 210,55 210,130 320,200" fill="#252B32"/>
+  <polygon points="0,200 110,130 210,130 320,200" fill="#E4E6E7"/>
+  <rect x="110" y="55" width="100" height="75" fill="#0E1115"/>
+  <!-- floor planks -->
+  <g stroke="#D3D7DB" stroke-width=".8"><path d="M135 130 L80 200M160 130V200M185 130 L240 200M60 162H260M30 181H290"/></g>
+  <!-- window and light -->
+  <rect x="128" y="66" width="44" height="40" fill="#F5F5F3" opacity=".92"/>
+  <path d="M150 66V106M128 86H172" stroke="#0E1115" stroke-width="2"/>
+  <polygon points="128,106 172,106 214,175 108,175" fill="url(#beam)"/>
+  <!-- art on right wall -->
+  <polygon points="236,58 268,48 268,96 236,100" fill="#F5F5F3" opacity=".85"/>
+  <polygon points="242,62 262,56 262,90 242,94" fill="#4169E1"/>
+  <!-- pendant -->
+  <path d="M190 0V40" stroke="#F5F5F3" stroke-width="1"/>
+  <path d="M182 40H198L194 33H186Z" fill="#F5F5F3"/>
+  <circle cx="190" cy="44" r="16" fill="url(#glow)"/>
+  <!-- sofa -->
+  <path d="M60 146H130V168H60Z" fill="#788895"/>
+  <path d="M60 136H130V148H60Z" fill="#A3ADB6"/>
+  <path d="M54 140H64V172H54ZM126 140H136V172H126Z" fill="#5C6873"/>
+  <!-- table and plant -->
+  <path d="M168 160H226L236 170H158Z" fill="#F5F5F3"/>
+  <path d="M168 170V182M226 170V182" stroke="#F5F5F3" stroke-width="2"/>
+  <path d="M252 140H266L262 160H256Z" fill="#0E1115"/>
+  <path d="M259 140C250 124 256 112 259 108C262 114 268 124 259 140Z" fill="#0E1115" opacity=".75"/>
+  <!-- HUD -->
+  <rect x="12" y="12" width="40" height="14" rx="7" fill="#0E1115" fill-opacity=".85"/>
+  <circle cx="22" cy="19" r="3" fill="#7D98EE"/>
+  <text x="29" y="22" fill="#F5F5F3" font-size="7" font-weight="700" letter-spacing=".6">REC</text>
+  <rect x="12" y="176" width="104" height="14" rx="7" fill="#0E1115" fill-opacity=".85"/>
+  <text x="64" y="185.5" text-anchor="middle" fill="#F5F5F3" font-size="6.5" font-weight="700" letter-spacing=".8">LIVING · 3.6 × 4.2 M</text>
+  <text x="308" y="22" text-anchor="end" fill="#F5F5F3" font-size="7" font-weight="700" letter-spacing=".6">00:24</text>
+</svg>
